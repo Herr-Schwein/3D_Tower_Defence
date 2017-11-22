@@ -8,6 +8,7 @@ public class WaveSpawner : MonoBehaviour {
 	public Transform EnemyPrefab;
 	public Transform spawnPoint;
 
+
 	public float timeBetweenWaves = 20f;
 	public Text waveCountDownText;
 	private float countdown = 5f;

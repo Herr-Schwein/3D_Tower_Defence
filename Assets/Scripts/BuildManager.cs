@@ -17,6 +17,7 @@ public class BuildManager : MonoBehaviour {
 
 	public GameObject standardTurretPrefab;
 	public GameObject frozenTurretPrefab;
+	public GameObject buildEffect;
 
 	private TurretBlueprint turretToBuild;
 
@@ -34,7 +35,8 @@ public class BuildManager : MonoBehaviour {
 		PlayerStats.Money -= turretToBuild.cost;
 		GameObject turret = (GameObject)Instantiate (turretToBuild.Prefab, tile.GetBuildPosition(), Quaternion.identity);
 		tile.turret = turret;
-
+		GameObject effect = (GameObject)Instantiate (buildEffect, tile.GetBuildPosition (), Quaternion.identity);
+		Destroy (effect, 5f);
 		Debug.Log ("Money left " + PlayerStats.Money);
 	}
 
