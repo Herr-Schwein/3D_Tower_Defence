@@ -1,9 +1,12 @@
 ﻿using UnityEngine;
 using UnityEngine.AI;
 
-public class EnemyMovement : MonoBehaviour {
+public class Enemy : MonoBehaviour {
 
 	public float speed = 10f;
+	public int health = 100;
+	public int value = 10;
+	public GameObject destroyEffect;
 	private Transform target;
 	private int waypointIndex = 0;
 
@@ -17,6 +20,22 @@ public class EnemyMovement : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
+
+	public void TakeDamage (int amount) {
+		health -= amount;
+		if (health <= 0) {
+			Die ();
+		}
+	}
+
+	void Die () {
+		PlayerStats.Money += value;
+
+		GameObject effect = (GameObject)Instantiate (destroyEffect, transform.position, Quaternion.identity);
+		Destroy (effect, 5f);
+		Destroy (gameObject);
+	}
+
 	void Update () {
 		Vector3 dir = target.position - transform.position;
 		transform.Translate (dir.normalized * speed * Time.deltaTime, Space.World);
