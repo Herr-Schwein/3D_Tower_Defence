@@ -4,16 +4,23 @@ using UnityEngine;
 
 public class BasicTarget : MonoBehaviour {
 
-	[Header("Attributes")]
+	[Header("General")]
 	public float range = 20f;
+
+	[Header("Use Bullets (default)")]
+	public GameObject bulletPrefab;
 	public float fireRate = 1f;
 	private float fireCooldown = 0f;
+
+	[Header("Use Laser")]
+	public bool useLaser = false;
+	public LineRenderer lineRenderer;
 
 	[Header("System Setup")]
 	private Transform target;
 	public float rotationSpeed = 200f;
 	public string enemytag = "Enemy";
-	public GameObject bulletPrefab;
+
 	public GameObject firePoint;
 
 	// Use this for initialization
@@ -43,20 +50,40 @@ public class BasicTarget : MonoBehaviour {
 	}
 	// Update is called once per frame
 	void Update () {
-		if (target == null)
+		if (target == null) {
+			if (useLaser) {
+				if (lineRenderer.enabled)
+					lineRenderer.enabled = false;
+			}
 			return;
+		}
+		LockOnTarget ();
 
+		if (useLaser) {
+			Laser ();
+		} else {
+			if (fireCooldown <= 0f) {
+				Shoot ();
+				fireCooldown = 1f / fireRate;
+			}
+
+			fireCooldown -= Time.deltaTime;
+		}
+	}
+
+	void LockOnTarget () {
 		Vector3 direction = target.position - transform.position;
 		Quaternion desiredRotation = Quaternion.LookRotation (direction, Vector3.up);
 		transform.rotation = Quaternion.RotateTowards (transform.rotation, desiredRotation, rotationSpeed * Time.deltaTime);
+	}
 
-
-		if (fireCooldown <= 0f) {
-			Shoot ();
-			fireCooldown = 1f / fireRate;
+	void Laser () {
+		if (!lineRenderer.enabled) {
+			lineRenderer.enabled = true;
 		}
 
-		fireCooldown -= Time.deltaTime;
+		lineRenderer.SetPosition (0, firePoint.transform.position);
+		lineRenderer.SetPosition (1, target.position);
 	}
 
 

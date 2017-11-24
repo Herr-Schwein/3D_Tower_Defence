@@ -14,9 +14,7 @@ public class BuildManager : MonoBehaviour {
 		}
 		instance = this;
 	}
-
-	public GameObject standardTurretPrefab;
-	public GameObject frozenTurretPrefab;
+		
 	public GameObject buildEffect;
 
 	private TurretBlueprint turretToBuild;

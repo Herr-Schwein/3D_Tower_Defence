@@ -3,6 +3,7 @@
 public class Shop : MonoBehaviour {
 	public TurretBlueprint standardTurret;
 	public TurretBlueprint frozenTurret;
+	public TurretBlueprint deathStar;
 
 	BuildManager buildManager;
 
@@ -14,6 +15,11 @@ public class Shop : MonoBehaviour {
 	public void SelectFrozenTurret(){
 		Debug.Log("Standard Turret Purchased.");
 		buildManager.SelectTurretToBuild (frozenTurret);
+	}
+
+	public void SelectDeathStar(){
+		Debug.Log("Death Star Purchased.");
+		buildManager.SelectTurretToBuild (deathStar);
 	}
 
 	// Use this for initialization
