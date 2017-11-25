@@ -15,6 +15,9 @@ public class BasicTarget : MonoBehaviour {
 	[Header("Use Laser")]
 	public bool useLaser = false;
 	public LineRenderer lineRenderer;
+	public ParticleSystem impactEffect;
+	public Light impactLight;
+
 
 	[Header("System Setup")]
 	private Transform target;
@@ -52,8 +55,12 @@ public class BasicTarget : MonoBehaviour {
 	void Update () {
 		if (target == null) {
 			if (useLaser) {
-				if (lineRenderer.enabled)
+				if (lineRenderer.enabled) {
+					impactEffect.Stop ();
 					lineRenderer.enabled = false;
+					impactLight.enabled = false;
+
+				}
 			}
 			return;
 		}
@@ -80,10 +87,20 @@ public class BasicTarget : MonoBehaviour {
 	void Laser () {
 		if (!lineRenderer.enabled) {
 			lineRenderer.enabled = true;
+			impactEffect.Play ();
+			impactLight.enabled = true;
+
+
+
 		}
 
 		lineRenderer.SetPosition (0, firePoint.transform.position);
 		lineRenderer.SetPosition (1, target.position);
+		Vector3 dir = firePoint.transform.position - target.position;
+		impactEffect.transform.rotation = Quaternion.LookRotation (dir);
+
+
+		impactEffect.transform.position = target.position + dir.normalized * .5f;;
 	}
 
 

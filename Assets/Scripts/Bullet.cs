@@ -40,7 +40,7 @@ public class Bullet : MonoBehaviour {
 		} else {
 			Damage (target);
 		}
-		Destroy (effectIns, 2f);
+		Destroy (effectIns, 1f);
 		Destroy (gameObject);
 	}
 

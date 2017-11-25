@@ -32,7 +32,7 @@ public class Enemy : MonoBehaviour {
 		PlayerStats.Money += value;
 
 		GameObject effect = (GameObject)Instantiate (destroyEffect, transform.position, Quaternion.identity);
-		Destroy (effect, 5f);
+		Destroy (effect, 2f);
 		Destroy (gameObject);
 	}
 
