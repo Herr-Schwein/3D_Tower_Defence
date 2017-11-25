@@ -14,6 +14,8 @@ public class BasicTarget : MonoBehaviour {
 
 	[Header("Use Laser")]
 	public bool useLaser = false;
+	public int damageOverTime = 30;
+	public float slowAmount = .5f;
 	public LineRenderer lineRenderer;
 	public ParticleSystem impactEffect;
 	public Light impactLight;
@@ -21,6 +23,7 @@ public class BasicTarget : MonoBehaviour {
 
 	[Header("System Setup")]
 	private Transform target;
+	private Enemy targetScript;
 	public float rotationSpeed = 200f;
 	public string enemytag = "Enemy";
 
@@ -46,8 +49,10 @@ public class BasicTarget : MonoBehaviour {
 
 		}
 
-		if (nearestEnemy != null && shortestDist <= range) 
+		if (nearestEnemy != null && shortestDist <= range) {
 			target = nearestEnemy.transform;
+			targetScript = nearestEnemy.GetComponent<Enemy>();
+		}
 		else
 			target = null;
 	}
@@ -85,6 +90,9 @@ public class BasicTarget : MonoBehaviour {
 	}
 
 	void Laser () {
+		targetScript.TakeDamage (damageOverTime * Time.deltaTime);
+		targetScript.Slow (slowAmount);
+
 		if (!lineRenderer.enabled) {
 			lineRenderer.enabled = true;
 			impactEffect.Play ();
