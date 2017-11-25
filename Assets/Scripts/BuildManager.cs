@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class BuildManager : MonoBehaviour {
 
@@ -16,12 +14,31 @@ public class BuildManager : MonoBehaviour {
 	}
 		
 	public GameObject buildEffect;
+	public TileUI tileUI;
 
 	private TurretBlueprint turretToBuild;
+	private Tile selectedTile;
 
-	// Use this for initialization
+
 	public void SelectTurretToBuild (TurretBlueprint turret) {
 		turretToBuild = turret;
+		selectedTile = null;
+		tileUI.Hide ();
+	}
+
+	public void SelectTile (Tile tile) {
+		if (selectedTile == tile) {
+			DeselectTile ();
+			return;
+		}
+		selectedTile = tile;
+		turretToBuild = null;
+		tileUI.SetTarget (tile);
+	}
+
+	public void DeselectTile () {
+		selectedTile = null;
+		tileUI.Hide();
 	}
 
 	public void BuildTurretOn (Tile tile) {
@@ -40,8 +57,5 @@ public class BuildManager : MonoBehaviour {
 
 	public bool CanBuild { get { return turretToBuild != null;} }
 	public bool HasMoney { get { return PlayerStats.Money >= turretToBuild.cost;} }
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
 }

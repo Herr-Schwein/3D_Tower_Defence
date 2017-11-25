@@ -41,7 +41,7 @@ public class Tile : MonoBehaviour {
 		
 		if (!buildManager.CanBuild)
 			return;
-
+		
 		if (buildManager.HasMoney) {
 			rend.material.color = hoverColor;
 		} else {
@@ -59,15 +59,14 @@ public class Tile : MonoBehaviour {
 	void OnMouseDown () {
 		if (EventSystem.current.IsPointerOverGameObject ())
 			return;
-		
-		if (!buildManager.CanBuild)
-			return;
-		
 
 		if (turret != null) {
-			Debug.Log ("Can not build here.");
+			buildManager.SelectTile (this);
 			return;
 		}
+
+		if (!buildManager.CanBuild)
+			return;
 
 		buildManager.BuildTurretOn (this);
 	}

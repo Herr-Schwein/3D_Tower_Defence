@@ -38,7 +38,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4560369641347738}
   - component: {fileID: 95028884714175174}
-  - component: {fileID: 64749838395134000}
   m_Layer: 0
   m_Name: Turret
   m_TagString: Untagged
@@ -56,7 +55,6 @@ GameObject:
   - component: {fileID: 4767029678994898}
   - component: {fileID: 33516864452554058}
   - component: {fileID: 23317128793904014}
-  - component: {fileID: 64193890039445358}
   m_Layer: 0
   m_Name: Base
   m_TagString: Untagged
@@ -216,34 +214,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1866637626268378}
   m_Mesh: {fileID: 4300006, guid: a5d8238cd736949639f891ac385a0767, type: 3}
---- !u!64 &64193890039445358
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1866637626268378}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Convex: 0
-  m_InflateMesh: 0
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300006, guid: a5d8238cd736949639f891ac385a0767, type: 3}
---- !u!64 &64749838395134000
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1824469083180022}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Convex: 0
-  m_InflateMesh: 0
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 0}
 --- !u!95 &95028884714175174
 Animator:
   serializedVersion: 3
@@ -273,9 +243,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 10
-  fireRate: 2
-  rotationSpeed: 300
-  enemytag: Enemy
   bulletPrefab: {fileID: 1628092647578008, guid: 7db588ed13c4c4ab283588940ac47562,
     type: 2}
+  fireRate: 2
+  useLaser: 0
+  damageOverTime: 30
+  slowAmount: 0.5
+  lineRenderer: {fileID: 0}
+  impactEffect: {fileID: 0}
+  impactLight: {fileID: 0}
+  rotationSpeed: 300
+  enemytag: Enemy
   firePoint: {fileID: 1951780929166890}
