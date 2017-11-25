@@ -375,9 +375,11 @@ MonoBehaviour:
   bulletPrefab: {fileID: 0}
   fireRate: 1
   useLaser: 1
+  damageOverTime: 30
+  slowAmount: 0.5
   lineRenderer: {fileID: 120821099320760448}
   impactEffect: {fileID: 198924491181932244}
-  impactLight: {fileID: 0}
+  impactLight: {fileID: 108516146049424220}
   rotationSpeed: 300
   enemytag: Enemy
   firePoint: {fileID: 1473822488840628}
@@ -529,7 +531,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 774458459
+  randomSeed: 2063448081
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -3846,7 +3848,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 643373012
+  randomSeed: 2134476758
   InitialModule:
     serializedVersion: 3
     enabled: 1

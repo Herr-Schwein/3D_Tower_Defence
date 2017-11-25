@@ -67,6 +67,7 @@
      <Compile Include="Assets\Scripts\Tiles.cs" />
      <Compile Include="Assets\Scripts\TileUI.cs" />
      <Compile Include="Assets\Scripts\TurretBlueprint.cs" />
+     <Compile Include="Assets\Scripts\Wave.cs" />
      <Compile Include="Assets\Scripts\WaveSpawner.cs" />
      <Compile Include="Assets\Scripts\Waypoints.cs" />
      <None Include="Assets\Fonts\Roboto\LICENSE.txt" />

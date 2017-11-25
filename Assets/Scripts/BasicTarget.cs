@@ -56,7 +56,7 @@ public class BasicTarget : MonoBehaviour {
 		else
 			target = null;
 	}
-	// Update is called once per frame
+
 	void Update () {
 		if (target == null) {
 			if (useLaser) {

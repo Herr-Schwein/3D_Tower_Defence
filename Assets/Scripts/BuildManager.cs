@@ -22,8 +22,7 @@ public class BuildManager : MonoBehaviour {
 
 	public void SelectTurretToBuild (TurretBlueprint turret) {
 		turretToBuild = turret;
-		selectedTile = null;
-		tileUI.Hide ();
+		DeselectTile ();
 	}
 
 	public void SelectTile (Tile tile) {

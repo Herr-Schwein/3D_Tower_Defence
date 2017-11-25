@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 198601131932301316}
   - component: {fileID: 199257869673759914}
   m_Layer: 0
-  m_Name: EnemyDestroyEffect
+  m_Name: EnemyDestroyEffect_Normal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

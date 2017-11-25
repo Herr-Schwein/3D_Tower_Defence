@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114051210998825088}
   - component: {fileID: 114641535662784776}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: Enemy_Fast
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -39,7 +39,7 @@ Transform:
   m_GameObject: {fileID: 1778044067590174}
   m_LocalRotation: {x: -0, y: -0.92604506, z: -0, w: 0.37741306}
   m_LocalPosition: {x: 11.709363, y: 0.25425017, z: -0.2679138}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -58,7 +58,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: e93dde63652d84df9b3ac82645ea07d6, type: 2}
+  - {fileID: 2100000, guid: 73303796f61254554a90aebb302d2468, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -98,9 +98,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   initSpeed: 10
   speed: 5
-  health: 100
-  value: 10
-  destroyEffect: {fileID: 1459304577210436, guid: 790fb5b5cd7ad4535a27b0f33fe95dfd,
+  health: 50
+  value: 20
+  destroyEffect: {fileID: 1459304577210436, guid: 5101795093dba484ab145c29239b580e,
     type: 2}
 --- !u!114 &114641535662784776
 MonoBehaviour:
