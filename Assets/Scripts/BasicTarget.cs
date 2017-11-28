@@ -97,16 +97,12 @@ public class BasicTarget : MonoBehaviour {
 			lineRenderer.enabled = true;
 			impactEffect.Play ();
 			impactLight.enabled = true;
-
-
-
 		}
 
 		lineRenderer.SetPosition (0, firePoint.transform.position);
 		lineRenderer.SetPosition (1, target.position);
 		Vector3 dir = firePoint.transform.position - target.position;
 		impactEffect.transform.rotation = Quaternion.LookRotation (dir);
-
 
 		impactEffect.transform.position = target.position + dir.normalized * .5f;;
 	}

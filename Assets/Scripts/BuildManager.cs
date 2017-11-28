@@ -38,19 +38,10 @@ public class BuildManager : MonoBehaviour {
 		tileUI.Hide();
 	}
 
-	public void BuildTurretOn (Tile tile) {
-		if (PlayerStats.Money < turretToBuild.cost) {
-			return;
-		}
-
-		PlayerStats.Money -= turretToBuild.cost;
-		GameObject turret = (GameObject)Instantiate (turretToBuild.Prefab, tile.GetBuildPosition(), Quaternion.identity);
-		tile.turret = turret;
-		GameObject effect = (GameObject)Instantiate (buildEffect, tile.GetBuildPosition (), Quaternion.identity);
-		Destroy (effect, 5f);
+	public TurretBlueprint GetTurretToBuild() {
+		return turretToBuild;
 	}
 
 	public bool CanBuild { get { return turretToBuild != null;} }
 	public bool HasMoney { get { return PlayerStats.Money >= turretToBuild.cost;} }
-
 }

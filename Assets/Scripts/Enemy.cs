@@ -14,9 +14,6 @@ public class Enemy : MonoBehaviour {
 	public GameObject destroyEffect;
 	private bool isDead = false;
 
-
-
-
 	void Start() {
 		speed = initSpeed; 
 	}
@@ -24,7 +21,7 @@ public class Enemy : MonoBehaviour {
 	public void TakeDamage (float amount) {
 		health -= amount;
 		if (health <= 0 && !isDead) {
-				Die ();
+			Die ();
 		}
 	}
 
