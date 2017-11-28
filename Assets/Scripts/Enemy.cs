@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
-using UnityEngine.AI;
-using System.Runtime.CompilerServices;
-using System.Threading;
+using UnityEngine.UI;
+//using System.Runtime.CompilerServices;
+//using System.Threading;
 
 public class Enemy : MonoBehaviour {
 
@@ -9,17 +9,26 @@ public class Enemy : MonoBehaviour {
 	[HideInInspector]
 	public float speed;
 
-	public float health = 100;
+	public float initHealth = 100;
+	private float health;
+
 	public int value = 10;
 	public GameObject destroyEffect;
 	private bool isDead = false;
 
+	[Header("Unity Stuff")]
+	public Image lifeBar;
+
 	void Start() {
 		speed = initSpeed; 
+		health = initHealth;
 	}
 		
 	public void TakeDamage (float amount) {
 		health -= amount;
+
+		lifeBar.fillAmount = health / initHealth;
+
 		if (health <= 0 && !isDead) {
 			Die ();
 		}
@@ -37,8 +46,6 @@ public class Enemy : MonoBehaviour {
 		Destroy (effect, 2f);
 		WaveSpawner.EnemiesAlive--;
 		Destroy (gameObject);
-
 	}
-
 
 }
