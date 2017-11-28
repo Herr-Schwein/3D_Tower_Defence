@@ -27,7 +27,14 @@ public class Enemy : MonoBehaviour {
 	public void TakeDamage (float amount) {
 		health -= amount;
 
-		lifeBar.fillAmount = health / initHealth;
+		float perc = health / initHealth;
+		lifeBar.fillAmount = perc;
+
+		if (perc < 0.2) {
+			lifeBar.color = Color.red;
+		} else if (perc < 0.5) {
+			lifeBar.color = Color.yellow;
+		}
 
 		if (health <= 0 && !isDead) {
 			Die ();
