@@ -4,14 +4,18 @@ using UnityEngine;
 public class GameManager : MonoBehaviour {
 
 	public GameObject gameOverUI;
+	public GameObject levelCompleteUI;
+	public GameObject gameWonUI;
+
+
 
 	public static bool GameIsOver;
+	public static bool LevelIsChecked = false;
 
 	void Start () {
 		GameIsOver = false;
 	}
-	
-	// Update is called once per frame
+
 	void Update () {
 		if (GameIsOver) {
 			return;
@@ -24,6 +28,13 @@ public class GameManager : MonoBehaviour {
 		if (PlayerStats.Lives <= 0) {
 			EndGame ();
 		}
+		if (!LevelIsChecked && PlayerStats.Rounds % WaveSpawner.WavesPerLevel == 0 && PlayerStats.Rounds != 0 && WaveSpawner.EnemiesAlive == 0){
+			
+			LevelComplete ();
+		}
+		if (PlayerStats.Rounds % WaveSpawner.WavesPerLevel != 0)
+			LevelIsChecked = false;
+
 	}
 
 	void EndGame () {
@@ -31,4 +42,14 @@ public class GameManager : MonoBehaviour {
 		gameOverUI.SetActive (true);
 
 	}
+	void LevelComplete () {
+		
+		levelCompleteUI.SetActive (true);
+	}
+
+	public void WinGame () {
+		GameIsOver = true;
+		gameWonUI.SetActive (true);
+	}
+
 }

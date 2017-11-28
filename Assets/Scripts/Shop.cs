@@ -8,17 +8,14 @@ public class Shop : MonoBehaviour {
 	BuildManager buildManager;
 
 	public void SelectStandardTurret(){
-		Debug.Log("Standard Turret Purchased.");
 		buildManager.SelectTurretToBuild (standardTurret);
 	}
 
 	public void SelectFrozenTurret(){
-		Debug.Log("Standard Turret Purchased.");
 		buildManager.SelectTurretToBuild (frozenTurret);
 	}
 
 	public void SelectDeathStar(){
-		Debug.Log("Death Star Purchased.");
 		buildManager.SelectTurretToBuild (deathStar);
 	}
 

@@ -84,7 +84,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1757657055853510}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.022788502, y: -0.45747778, z: -0.17098664}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4299226605727338}
@@ -97,7 +97,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1409604705024582}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 1, z: -0.18182726}
+  m_LocalPosition: {x: -0, y: 1.29, z: 0.02}
   m_LocalScale: {x: 0.6952826, y: 0.41716957, z: 0.6952826}
   m_Children:
   - {fileID: 4257418410765244}
@@ -124,7 +124,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1492160726999960}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.426803, y: 1.77, z: -15.70053}
+  m_LocalPosition: {x: 0, y: 2.47, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4196809712140854}
@@ -243,9 +243,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 20
-  fireRate: 1
-  rotationSpeed: 200
-  enemytag: Enemy
   bulletPrefab: {fileID: 1685261644857978, guid: 3d72652a98a054abf9aa1a9f9b58a36c,
     type: 2}
+  fireRate: 1
+  useLaser: 0
+  damageOverTime: 30
+  slowAmount: 0.5
+  lineRenderer: {fileID: 0}
+  impactEffect: {fileID: 0}
+  impactLight: {fileID: 0}
+  rotationSpeed: 200
+  enemytag: Enemy
   firePoint: {fileID: 1716951661590580}

@@ -6,8 +6,6 @@ public class BuildManager : MonoBehaviour {
 
 	void Awake () {
 		if (instance != null) {
-
-			Debug.LogError ("More than one build manager.");
 			return;
 		}
 		instance = this;
@@ -42,7 +40,6 @@ public class BuildManager : MonoBehaviour {
 
 	public void BuildTurretOn (Tile tile) {
 		if (PlayerStats.Money < turretToBuild.cost) {
-			Debug.Log ("Not enough money.");
 			return;
 		}
 
@@ -51,7 +48,6 @@ public class BuildManager : MonoBehaviour {
 		tile.turret = turret;
 		GameObject effect = (GameObject)Instantiate (buildEffect, tile.GetBuildPosition (), Quaternion.identity);
 		Destroy (effect, 5f);
-		Debug.Log ("Money left " + PlayerStats.Money);
 	}
 
 	public bool CanBuild { get { return turretToBuild != null;} }

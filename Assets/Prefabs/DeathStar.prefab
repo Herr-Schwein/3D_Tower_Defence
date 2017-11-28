@@ -161,7 +161,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1169034837027552}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.56268, y: 5.835942e-17, z: -10.513098}
+  m_LocalPosition: {x: 0, y: 7.64, z: -0.85}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4674537421309528}
@@ -177,7 +177,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1676369971929448}
   m_LocalRotation: {x: -0.64915216, y: -0.28035966, z: 0.2803597, w: 0.64915216}
-  m_LocalPosition: {x: -0, y: 1.61, z: -0.000000069415655}
+  m_LocalPosition: {x: 0.02, y: 1.529, z: -0.004}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4185410669480090}
@@ -375,7 +375,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 0}
   fireRate: 1
   useLaser: 1
-  damageOverTime: 30
+  damageOverTime: 70
   slowAmount: 0.5
   lineRenderer: {fileID: 120821099320760448}
   impactEffect: {fileID: 198924491181932244}
