@@ -44,16 +44,11 @@ public class BuildManager : MonoBehaviour {
 
 	public bool CanBuild { get { return turretToBuild != null;} }
 	public bool HasMoney { get { return PlayerStats.Money >= turretToBuild.cost;} }
-<<<<<<< Updated upstream
-||||||| merged common ancestors
 
-=======
 
 	void Update () {
 		if (Input.GetMouseButtonDown (1)) {
 			turretToBuild = null;
 		}
 	}
-
->>>>>>> Stashed changes
 }
