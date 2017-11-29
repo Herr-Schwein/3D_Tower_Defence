@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4211052245342346}
   - component: {fileID: 95607134627202170}
+  - component: {fileID: 114790021208361486}
   m_Layer: 0
   m_Name: DeathStar
   m_TagString: Untagged
@@ -360,13 +361,38 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &114790021208361486
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1169034837027552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8601e844ad3fc470891b8c21023d3bfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 5
+  bulletPrefab: {fileID: 0}
+  fireRate: 1
+  useLaser: 1
+  damageOverTime: 10
+  slowAmount: 0.5
+  lineRenderer: {fileID: 120821099320760448}
+  impactEffect: {fileID: 198924491181932244}
+  impactLight: {fileID: 108516146049424220}
+  partToRotate: {fileID: 4283596052650016}
+  fullRotation: 1
+  rotationSpeed: 300
+  enemytag: Enemy
+  firePoint: {fileID: 1473822488840628}
 --- !u!114 &114979666669591158
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1676369971929448}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8601e844ad3fc470891b8c21023d3bfb, type: 3}
   m_Name: 
@@ -380,6 +406,8 @@ MonoBehaviour:
   lineRenderer: {fileID: 120821099320760448}
   impactEffect: {fileID: 198924491181932244}
   impactLight: {fileID: 108516146049424220}
+  partToRotate: {fileID: 4283596052650016}
+  fullRotation: 1
   rotationSpeed: 300
   enemytag: Enemy
   firePoint: {fileID: 1473822488840628}

@@ -2,7 +2,7 @@
 
 public class Shop : MonoBehaviour {
 	public TurretBlueprint standardTurret;
-	public TurretBlueprint frozenTurret;
+	public TurretBlueprint crystalTurret;
 	public TurretBlueprint deathStar;
 
 	BuildManager buildManager;
@@ -11,8 +11,8 @@ public class Shop : MonoBehaviour {
 		buildManager.SelectTurretToBuild (standardTurret);
 	}
 
-	public void SelectFrozenTurret(){
-		buildManager.SelectTurretToBuild (frozenTurret);
+	public void SelectCrystalTurret(){
+		buildManager.SelectTurretToBuild (crystalTurret);
 	}
 
 	public void SelectDeathStar(){
@@ -22,10 +22,5 @@ public class Shop : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		buildManager = BuildManager.instance;
-	}
-	
-	// Update is called once per frame  
-	void Update () { 
-		
 	}
 }

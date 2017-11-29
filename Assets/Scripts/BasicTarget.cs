@@ -22,10 +22,13 @@ public class BasicTarget : MonoBehaviour {
 
 
 	[Header("System Setup")]
-	private Transform target;
-	private Enemy targetScript;
+	public Transform partToRotate;
+	public bool fullRotation = true;
 	public float rotationSpeed = 200f;
 	public string enemytag = "Enemy";
+	private Transform target;
+	private Enemy targetScript;
+
 
 	public GameObject firePoint;
 
@@ -85,8 +88,13 @@ public class BasicTarget : MonoBehaviour {
 
 	void LockOnTarget () {
 		Vector3 direction = target.position - transform.position;
-		Quaternion desiredRotation = Quaternion.LookRotation (direction, Vector3.up);
-		transform.rotation = Quaternion.RotateTowards (transform.rotation, desiredRotation, rotationSpeed * Time.deltaTime);
+		Quaternion lookRotation = Quaternion.LookRotation(direction);
+		if (fullRotation)
+			partToRotate.rotation = Quaternion.RotateTowards (partToRotate.rotation, lookRotation, rotationSpeed * Time.deltaTime);
+		else {
+			Vector3 rotation = Quaternion.Lerp (partToRotate.rotation, lookRotation, Time.deltaTime * rotationSpeed).eulerAngles;
+			partToRotate.rotation = Quaternion.Euler (0f, rotation.y, 0f);
+		}
 	}
 
 	void Laser () {

@@ -9,6 +9,7 @@ public class MainMenu : MonoBehaviour {
 	public void Play ()
 	{
 		SceneManager.LoadScene(levelToLoad);
+		WaveSpawner.EnemiesAlive = 0;
 	}
 
 	public void Quit ()

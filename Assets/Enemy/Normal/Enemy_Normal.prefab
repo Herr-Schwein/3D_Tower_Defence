@@ -151,7 +151,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   initSpeed: 5
   speed: 5
+<<<<<<< Updated upstream
   initHealth: 100
+||||||| merged common ancestors
+  health: 100
+=======
+  health: 150
+>>>>>>> Stashed changes
   value: 10
   destroyEffect: {fileID: 1459304577210436, guid: 790fb5b5cd7ad4535a27b0f33fe95dfd,
     type: 2}

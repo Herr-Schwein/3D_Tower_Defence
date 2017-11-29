@@ -35,7 +35,7 @@ public class Tile : MonoBehaviour {
 		if (EventSystem.current.IsPointerOverGameObject ())
 			return;
 		
-		if (!buildManager.CanBuild)
+		if (!buildManager.CanBuild || turret != null)
 			return;
 		
 		if (buildManager.HasMoney) {
@@ -64,6 +64,7 @@ public class Tile : MonoBehaviour {
 
 		BuildTurret (buildManager.GetTurretToBuild());
 	}
+<<<<<<< Updated upstream
 
 	void BuildTurret (TurretBlueprint blueprint) {
 		if (PlayerStats.Money < blueprint.cost) {
@@ -109,4 +110,12 @@ public class Tile : MonoBehaviour {
 		turretBlueprint = null;
 	}
 
+||||||| merged common ancestors
+	
+	// Update is called once per frame
+	void Update () {
+		
+	}
+=======
+>>>>>>> Stashed changes
 }

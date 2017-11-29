@@ -13,6 +13,7 @@ public class GameWon : MonoBehaviour {
 
 	public void Replay () {
 		SceneManager.LoadScene (SceneManager.GetActiveScene().buildIndex);
+		WaveSpawner.EnemiesAlive = 0;
 	}
 
 	public void Menu () {
