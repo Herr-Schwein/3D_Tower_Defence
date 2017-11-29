@@ -151,13 +151,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   initSpeed: 3
   speed: 5
-<<<<<<< Updated upstream
-  initHealth: 100
-||||||| merged common ancestors
-  health: 500
-=======
-  health: 400
->>>>>>> Stashed changes
+  initHealth: 300
   value: 50
   destroyEffect: {fileID: 1459304577210436, guid: d83d968a60b714e2da7590df67a6d455,
     type: 2}
@@ -197,7 +191,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 16b7e386a8ea24b1e8414f487c4a6100, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1cd0d7fedfe714c4e846505eeb859e3e, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
