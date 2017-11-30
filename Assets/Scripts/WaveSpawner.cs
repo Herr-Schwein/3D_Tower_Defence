@@ -9,7 +9,8 @@ public class WaveSpawner : MonoBehaviour {
 	public Wave[] waves;
 	public Transform spawnPoint;
 	public float timeBetweenWaves = 3f;
-	public Text waveCountDownText;
+//	public Text waveCountDownText;
+	public Text roundCountDownText;
 	public GameObject levelCompleteUI;
 	public GameManager gameManager;
 
@@ -38,7 +39,9 @@ public class WaveSpawner : MonoBehaviour {
 
 		countdown -= Time.deltaTime;
 		countdown = Mathf.Clamp (countdown, 0f, Mathf.Infinity);
-		waveCountDownText.text = string.Format ("{0:00.00}", countdown);
+//		waveCountDownText.text = string.Format ("{0:00.00}", countdown);
+		roundCountDownText.text = "Round " + PlayerStats.Rounds;
+
 	}
 
 	IEnumerator SpawnWave() {
