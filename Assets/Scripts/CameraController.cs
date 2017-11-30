@@ -10,8 +10,6 @@ public class CameraController : MonoBehaviour {
 	public float minY = 5f;
 	public float maxY = 20f;
 
-
-
 	// Use this for initialization
 	void Start () {
 		
@@ -51,6 +49,10 @@ public class CameraController : MonoBehaviour {
 
 		pos.y -= scroll * 1000 * scrollSpeed * Time.deltaTime;
 		pos.y = Mathf.Clamp (pos.y, minY, maxY);
+
+		// negative number may cause bugs, so write in hard codes
+		pos.x = Mathf.Clamp (pos.x + 10f, 0f, 25f) - 10f;
+		pos.z = Mathf.Clamp (pos.z + 15f, 0f, 15f) - 15f;
 
 		transform.position = pos;
 	}
