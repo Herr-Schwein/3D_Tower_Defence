@@ -205,7 +205,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1201329364131190}
   m_LocalRotation: {x: -0.64915216, y: -0.28035966, z: 0.2803597, w: 0.64915216}
-  m_LocalPosition: {x: 0, y: 1.61, z: 0}
+  m_LocalPosition: {x: 6.5, y: 8.51, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4861235465667382}
@@ -334,7 +334,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 2
-  m_Color: {r: 0, g: 1, b: 0.006896496, a: 1}
+  m_Color: {r: 0.8929603, g: 0.9852941, b: 0.028979266, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -376,8 +376,8 @@ MonoBehaviour:
   bulletPrefab: {fileID: 0}
   fireRate: 1
   useLaser: 1
-  damageOverTime: 10
-  slowAmount: 0.5
+  damageOverTime: 15
+  slowAmount: 0.7
   lineRenderer: {fileID: 120821099320760448}
   impactEffect: {fileID: 198924491181932244}
   impactLight: {fileID: 108516146049424220}
@@ -425,7 +425,7 @@ LineRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 2100000, guid: 918073d9abe8a458a8dd57d050634d70, type: 2}
+  - {fileID: 2100000, guid: 91501f06760f34120a24a2801a2df09c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -465,8 +465,8 @@ LineRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0, g: 1, b: 0.2965517, a: 1}
-      key1: {r: 0.36121324, g: 0.9632353, b: 0.5397439, a: 1}
+      key0: {r: 0.95493156, g: 0.9632353, b: 0.36121324, a: 1}
+      key1: {r: 0.95493156, g: 0.9632353, b: 0.36121324, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
@@ -559,7 +559,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 2063448081
+  randomSeed: -607865505
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -649,7 +649,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0, g: 1, b: 0.42068958, a: 1}
+      maxColor: {r: 0.9862069, g: 1, b: 0, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -3876,7 +3876,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 2134476758
+  randomSeed: 1985478877
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -7223,8 +7223,8 @@ ParticleSystemRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 2100000, guid: 918073d9abe8a458a8dd57d050634d70, type: 2}
-  - {fileID: 2100000, guid: 918073d9abe8a458a8dd57d050634d70, type: 2}
+  - {fileID: 2100000, guid: 91501f06760f34120a24a2801a2df09c, type: 2}
+  - {fileID: 2100000, guid: 91501f06760f34120a24a2801a2df09c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

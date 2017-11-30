@@ -162,7 +162,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1169034837027552}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 7.64, z: -0.85}
+  m_LocalPosition: {x: -3.5906248, y: -3.142456e-17, z: 14.152363}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4674537421309528}
@@ -240,7 +240,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 07111a51fef33435f84ff709050ce679, type: 2}
+  - {fileID: 2100000, guid: 7b3a374f960ec4471a37674d460c547a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -274,7 +274,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 07111a51fef33435f84ff709050ce679, type: 2}
+  - {fileID: 2100000, guid: 7b3a374f960ec4471a37674d460c547a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -372,11 +372,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8601e844ad3fc470891b8c21023d3bfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 5
+  range: 8
   bulletPrefab: {fileID: 0}
   fireRate: 1
   useLaser: 1
-  damageOverTime: 10
+  damageOverTime: 20
   slowAmount: 0.5
   lineRenderer: {fileID: 120821099320760448}
   impactEffect: {fileID: 198924491181932244}

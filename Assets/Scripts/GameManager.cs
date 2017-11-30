@@ -40,6 +40,8 @@ public class GameManager : MonoBehaviour {
 	void EndGame () {
 		GameIsOver = true;
 		gameOverUI.SetActive (true);
+		StartCoroutine (Pause());
+
 
 	}
 	void LevelComplete () {
@@ -52,4 +54,8 @@ public class GameManager : MonoBehaviour {
 		gameWonUI.SetActive (true);
 	}
 
+	IEnumerator Pause() {
+		yield return new WaitForSeconds (1);
+		Time.timeScale = 0f;
+	}
 }

@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 224109992375923362}
   - component: {fileID: 222420445859620778}
   - component: {fileID: 114687843366070002}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: HealthBG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 224285329200643278}
   - component: {fileID: 222034219603155298}
   - component: {fileID: 114300027197296906}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -76,7 +76,7 @@ GameObject:
   - component: {fileID: 223743643331219846}
   - component: {fileID: 114462832889279152}
   - component: {fileID: 114171959090636116}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Health
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1778044067590174}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 23.59, y: 3.08, z: -2.380471}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224254741096617502}
@@ -152,7 +152,7 @@ MonoBehaviour:
   initSpeed: 3
   speed: 5
   initHealth: 300
-  value: 50
+  value: 70
   destroyEffect: {fileID: 1459304577210436, guid: d83d968a60b714e2da7590df67a6d455,
     type: 2}
   lifeBar: {fileID: 114300027197296906}
@@ -328,8 +328,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1792472225067970}
   m_LocalRotation: {x: 0.3420201, y: 0, z: 0, w: 0.9396927}
-  m_LocalPosition: {x: 0, y: 1.1000004, z: 1.34}
-  m_LocalScale: {x: 0.042860016, y: 0.04286, z: 0.04286001}
+  m_LocalPosition: {x: 0, y: 1.3199997, z: 1.52}
+  m_LocalScale: {x: 0.06600439, y: 0.04286, z: 0.04286001}
   m_Children:
   - {fileID: 224109992375923362}
   m_Father: {fileID: 4591691244542914}
@@ -337,7 +337,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 40, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 1.1}
+  m_AnchoredPosition: {x: 0, y: 1.32}
   m_SizeDelta: {x: 35.534, y: 45.735}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224285329200643278

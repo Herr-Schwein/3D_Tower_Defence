@@ -13,11 +13,13 @@ public class GameOver : MonoBehaviour {
 	}
 
 	public void Retry () {
+		Time.timeScale = 1f;
 		SceneManager.LoadScene (SceneManager.GetActiveScene().buildIndex);
 		WaveSpawner.EnemiesAlive = 0;
 	}
 
 	public void Menu () {
+		Time.timeScale = 1f;
 		SceneManager.LoadScene(menuSceneName);
 	}
 }
