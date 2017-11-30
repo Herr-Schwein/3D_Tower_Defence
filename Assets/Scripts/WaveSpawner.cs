@@ -22,6 +22,7 @@ public class WaveSpawner : MonoBehaviour {
 
 		if (EnemiesAlive > 0 && PlayerStats.Rounds % WavesPerLevel == 0 && PlayerStats.Rounds != 0)
 		{
+			roundCountDownText.text = "Round " + PlayerStats.Rounds;
 			return;
 		}
 
